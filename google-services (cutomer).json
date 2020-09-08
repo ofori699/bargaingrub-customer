@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "85781152296",
+    "firebase_url": "https://bargaingrub-280300.firebaseio.com",
+    "project_id": "bargaingrub-280300",
+    "storage_bucket": "bargaingrub-280300.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:85781152296:android:93c8e834fef22420352b1d",
+        "android_client_info": {
+          "package_name": "customer.bargaingrub.com"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "85781152296-hkkijir377soidj350rfk27ue3o1rsi6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBCDB9RokxCQJsWazzEfQjo6pifPZJwqK8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "85781152296-hkkijir377soidj350rfk27ue3o1rsi6.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,55 @@
+body {
+  background-color: #fcfcfc !important;
+}
+
+ons-pull-hook {
+margin: 13px auto auto !important;
+}
+
+.iphonex_margin
+{
+/*margin: 13px auto auto !important;*/
+}
+
+ons-action-sheet{
+margin-bottom:-20px !important;
+}
+
+.action-sheet--filter_sheet{
+height:500px !important;
+}
+
+ons-fab.fab--floating_category{
+bottom:90px !important;
+}
+
+.identify_location_wrap {
+	margin-top: 50px;
+}
+
+.button--rounded_button {
+	margin: 0 20px;
+    display: block;
+    width: auto;
+}
+
+.bottom-bar .button--to_orange {
+	margin: 0 20px;
+    display: block;
+    width: auto;
+}
+
+#map_select_location .bottom-bar .button--to_orange {
+	margin: 0;
+}
+
+.loc-btn-position {
+	bottom: 250px;
+}
+
+.stic-grey-btn {
+	bottom: 10px;
+    left: 20px;
+    right: 20px;
+    width: auto;
+}

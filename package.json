@@ -1,0 +1,77 @@
+{
+    "name": "com.bastisapp.mobileapp3",
+    "displayName": "Karenderia App Version 2",
+    "dependencies": {             	          	    	   
+	    "cordova-plugin-whitelist": "1.3.4",	    
+        "com-sarriaroman-photoviewer": "1.2.4",
+        "cordova-plugin-buildinfo": "4.0.0",
+        "cordova-plugin-camera": "4.1.0",
+        "cordova-plugin-device": "2.0.3",
+        "cordova-plugin-facebook4": "6.4.0",
+        "cordova-plugin-file-transfer": "1.7.1",
+        "cordova-plugin-geolocation": "4.0.2",
+        "cordova-plugin-googleplus": "8.4.0",
+        "cordova-plugin-inappbrowser": "3.2.0",
+        "cordova-plugin-media": "5.0.2",
+        "cordova-plugin-network-information": "2.0.2",
+        "cordova-plugin-splashscreen": "5.0.3",
+        "cordova-plugin-x-socialsharing": "5.6.5",
+        "cordova.plugins.diagnostic": "5.0.1",
+        "cordova-plugin-request-location-accuracy": "2.3.0",
+        "uk.co.workingedge.phonegap.plugin.launchnavigator": "5.0.4",
+        "cordova-plugin-ionic-webview": "4.2.1",
+		"cordova-plugin-dialogs": "git+https://github.com/dpa99c/cordova-plugin-dialogs.git",
+	    "cordova-plugin-enable-multidex": "^0.2.0",
+	    "cordova-plugin-firebasex": "9.1.0-cli"
+    },
+    "cordova": {
+        "plugins": {           
+          "cordova-plugin-whitelist": {},		    
+          "com-sarriaroman-photoviewer": {},
+          "cordova-plugin-buildinfo": {},
+          "cordova-plugin-camera": {},
+          "cordova-plugin-device": {},
+          "cordova-plugin-facebook4": {
+             "APP_ID": "2049491728632651",
+             "APP_NAME": "Bargain Grub"
+          },
+          "cordova-plugin-file-transfer": {},
+            "cordova-plugin-geolocation": {},
+            "cordova-plugin-googleplus": {
+                "REVERSED_CLIENT_ID": "85781152296-hkkijir377soidj350rfk27ue3o1rsi6.apps.googleusercontent.com",
+                "PLAY_SERVICES_VERSION": "11.0.1"
+            },
+            "cordova-plugin-inappbrowser": {},
+            "cordova-plugin-media": {},
+            "cordova-plugin-network-information": {},
+            "cordova-plugin-splashscreen": {},
+            "cordova-plugin-x-socialsharing": {},
+            "cordova.plugins.diagnostic": {},
+            "cordova-plugin-request-location-accuracy": {
+               "PLAY_SERVICES_VERSION": "11.0.1"
+            },
+            "uk.co.workingedge.phonegap.plugin.launchnavigator": {
+               "GOOGLE_API_KEY_FOR_ANDROID": ""
+            },
+            "cordova-plugin-ionic-webview": {},
+		    "cordova-plugin-dialogs": {},
+		    "cordova-plugin-enable-multidex": {},
+			"cordova-plugin-firebasex": {
+	           "ANDROID_ICON_ACCENT": "#FF11FF11",
+	           "FIREBASE_ANALYTICS_COLLECTION_ENABLED": "false",
+	           "FIREBASE_PERFORMANCE_COLLECTION_ENABLED": "false",
+	           "FIREBASE_CRASHLYTICS_COLLECTION_ENABLED": "false",
+	           "SETUP_RECAPTCHA_VERIFICATION": "false",
+	           "IOS_STRIP_DEBUG": "true"
+		    }
+        }        
+    },
+    "scripts": {
+        "monaca:preview": "npm run dev",
+        "dev": "browser-sync start -s www/ --watch --port 8080 --ui-port 8081"
+    },
+    "devDependencies": {
+        "browser-sync": "^2.24.5",
+        "cordova": "^9.0.0"
+    }
+}
