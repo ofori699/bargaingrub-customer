@@ -19,7 +19,6 @@
         "cordova.plugins.diagnostic": "5.0.1",
         "cordova-plugin-request-location-accuracy": "2.3.0",
         "uk.co.workingedge.phonegap.plugin.launchnavigator": "5.0.4",
-        "cordova-plugin-ionic-webview": {},
 		"cordova-plugin-dialogs": "git+https://github.com/dpa99c/cordova-plugin-dialogs.git",
 	    "cordova-plugin-enable-multidex": "^0.2.0",
 	    "cordova-plugin-firebasex": "9.1.0-cli"
@@ -53,7 +52,6 @@
             "uk.co.workingedge.phonegap.plugin.launchnavigator": {
                "GOOGLE_API_KEY_FOR_ANDROID": ""
             },
-            "cordova-plugin-ionic-webview": {},
 		    "cordova-plugin-dialogs": {},
 		    "cordova-plugin-enable-multidex": {},
 			"cordova-plugin-firebasex": {
