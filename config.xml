@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
-<widget xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0" xmlns:android="http://schemas.android.com/apk/res/android" id="customer.bargaingrub.com" versionCode="1.5" version="1.5.0">
+<widget xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0" xmlns:android="http://schemas.android.com/apk/res/android" id="customer.bargaingrub.com" versionCode="1.5.1" version="1.5.1">
   <name>BargainGrub</name>
   <description>
         BargainGrub
     </description>
   <author email="contact@bargaingrub.com" href="http://cordova.io">
-        bastisapp.com
+        bargaingrub.com
     </author>
   <content src="index.html"/>
   <preference name="orientation" value="portrait"/>
   <preference name="SplashScreenDelay" value="0"/>
   <preference name="fullscreen" value="false"/>
   <preference name="android-minSdkVersion" value="19"/>
-  <preference name="android-targetSdkVersion" value="28"/>
+  <preference name="android-targetSdkVersion" value="29"/>
   <preference name="KeepRunning" value="true"/>
   <allow-navigation href="*"/>
   <allow-intent href="itms:*"/>
@@ -58,12 +58,22 @@
   <edit-config target="NSBluetoothPeripheralUsageDescription" file="*-Info.plist" mode="merge">
     <string>Improve location accuracy when finding nearby restaurant</string>
   </edit-config>
+  <edit-config target="NSContactsUsageDescription" file="*-Info.plist" mode="merge">
+    <string>Need access to your contacts</string>
+  </edit-config>
+  <edit-config target="NSCalendarsUsageDescription" file="*-Info.plist" mode="merge">
+    <string>Need acces to calendar</string>
+  </edit-config>
+  <edit-config target="NSMotionUsageDescription" file="*-Info.plist" mode="merge">
+    <string>Improve location accuracy when finding nearby restaurant</string>
+  </edit-config>
   <platform name="android">
     <edit-config file="app/src/main/AndroidManifest.xml" mode="merge" target="/manifest/application">
       <application android:usesCleartextTraffic="true"/>
     </edit-config>
     <resource-file src="www/beep.wav" target="app/src/main/res/raw/beep.wav"/>
-    <!--<resource-file src="google-services.json" target="google-services.json"/>-->
+    <resource-file src="google-services.json" target="google-services.json"/>
+    <resource-file src="google-services.json" target="app/google-services.json"/>
     <icon density="ldpi" src="res/icons/android/drawable-ldpi-icon.png"/>
     <icon density="mdpi" src="res/icons/android/drawable-mdpi-icon.png"/>
     <icon density="hdpi" src="res/icons/android/drawable-hdpi-icon.png"/>

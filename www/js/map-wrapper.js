@@ -56,6 +56,7 @@ initMap = function(id , drag_map, drag_end){
 						    switch (current_page_id){
 						    	case "map_select_location":
 						    	case "address_form":
+						    	case "address_book":
 						    	   //$("#confirm_location").attr("disabled",false); 
 						    	   if (typeof infoWindow === "undefined" || infoWindow==null || infoWindow=="" || infoWindow=="null" || infoWindow=="undefined" ) {
 						    	   	  //
@@ -101,11 +102,11 @@ initMap = function(id , drag_map, drag_end){
 				   scrollWheelZoom:true,
 				   zoomControl:false,
 			    }).setView([app_settings.default_map_location.lat ,app_settings.default_map_location.lng ], 5 );  
-			    
-			    L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token='+mapbox_token, {		    
+			    			    
+			    L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token='+mapbox_token, {		
 			    	attribution: 'Mapbox',
-				    maxZoom: default_zoom ,
-				    id: 'mapbox.streets',		    
+				    maxZoom: default_zoom ,				    
+				    id: 'mapbox/streets-v11',		
 				}).addTo(map);
 								
 				return true;
@@ -354,7 +355,6 @@ initGeocomplete = function(element){
 				$(".mapbox_s_goecoder input").attr("id","search_address");
 				$(".mapbox_s_goecoder input").attr("placeholder", t("Search for your location") );	
 				$(".mapbox_s_goecoder input").attr("autocomplete","off");
-				$("#map_enter_address  .stic-icon").hide();
 				
 				geo_suggestion.on('result', function(results) {
 									    
@@ -460,6 +460,7 @@ gmaps_AskLocation = function(){
 	    		
 	    		case "map_select_location":
 	    		case "address_form":
+	    		case "address_book":
 	    		  GeocodeLat( your_lat, your_lng );
 	    		break;
 	    		
@@ -687,6 +688,7 @@ geolocationSuccess = function(position){
     		
     		case "map_select_location":
     		case "address_form":
+    		case "address_book":
     		  GeocodeLat( your_lat, your_lng );
     		break;
     		
@@ -928,6 +930,7 @@ map_addMarker = function(index, lat, lng, icon,  info_html){
 			  	      switch (current_page_id){
 			  	      	 case "map_select_location":
 			  	      	 case "address_form":
+			  	      	 case "address_book":
 			  	      	    if (app_settings.map_auto_identity_location==1){
 			  	      	    	identifyLocationLoader(true);
 			  	      	    } else {
@@ -950,6 +953,7 @@ map_addMarker = function(index, lat, lng, icon,  info_html){
 	                 switch (current_page_id){
 	                 	case "map_select_location":
 	                 	case "address_form":
+	                 	case "address_book":	                 	   
 	                 	   if ( app_settings.map_auto_identity_location==1){
 	                 	       GeocodeLat( new_lat , new_lng  );
 	                 	   } else {
@@ -1028,6 +1032,9 @@ GeocodeLat = function(lat, lng){
 	}	
 	dump("GeocodeLat");
 	if(app_settings = getAppSettings()){
+		
+		setTimeout(function() {	
+		
 		switch(app_settings.map_provider.provider){
 			case "google.maps":
 			   var geocoder = new google.maps.Geocoder;
@@ -1079,6 +1086,8 @@ GeocodeLat = function(lat, lng){
 			   processDynamicAjax("mapboxgeocode",params , 'print_location_address', 'GET', 1);
 			 break;
 		}
+		
+		}, 300); 
 	}		
 };
 

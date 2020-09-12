@@ -26,6 +26,26 @@ ons.ready(function() {
 });
 /*end ready*/
 
+inv_addQty = function(object){
+	if ((typeof object.attr("disabled") !== "undefined") && ( object.attr("disabled") !== null)) {			
+		return;
+	}
+	$qty = parseFloat( $("#qty").val())+1;	
+	InvSetQuantity( $qty )	;
+};
+
+inv_minusQty = function(object){
+	if ((typeof object.attr("disabled") !== "undefined") && ( object.attr("disabled") !== null)) {			
+		return;
+	}
+	$qty = parseFloat( $("#qty").val())-1;				
+	InvSetQuantity( $qty )	;	
+};
+
+inv_sizePrice = function(price){		
+	getStocks( price);
+};
+
 initStocks = function(){
 	inv_price = $('.radio-button--inv_price__input:checked').val();
 	getStocks(inv_price);

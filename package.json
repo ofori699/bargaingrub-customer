@@ -18,7 +18,8 @@
         "cordova-plugin-x-socialsharing": "5.6.5",
         "cordova.plugins.diagnostic": "5.0.1",
         "cordova-plugin-request-location-accuracy": "2.3.0",
-        "uk.co.workingedge.phonegap.plugin.launchnavigator": "5.0.4",
+        "uk.co.workingedge.phonegap.plugin.launchnavigator": "5.0.4",     
+        "cordova-plugin-apprate": "1.5.0",  
 		"cordova-plugin-dialogs": "git+https://github.com/dpa99c/cordova-plugin-dialogs.git",
 	    "cordova-plugin-enable-multidex": "^0.2.0",
 	    "cordova-plugin-firebasex": "9.1.0-cli"
@@ -32,12 +33,12 @@
           "cordova-plugin-device": {},
           "cordova-plugin-facebook4": {
              "APP_ID": "2049491728632651",
-             "APP_NAME": "Bargain Grub"
+             "APP_NAME": "Karenderia"
           },
           "cordova-plugin-file-transfer": {},
             "cordova-plugin-geolocation": {},
             "cordova-plugin-googleplus": {
-                "REVERSED_CLIENT_ID": "85781152296-hkkijir377soidj350rfk27ue3o1rsi6.apps.googleusercontent.com",
+                "REVERSED_CLIENT_ID": "com.googleusercontent.apps.46158489047-3a9m0f5gg4p9aemeo3vmh971dphtc3dn",
                 "PLAY_SERVICES_VERSION": "11.0.1"
             },
             "cordova-plugin-inappbrowser": {},
@@ -51,7 +52,9 @@
             },
             "uk.co.workingedge.phonegap.plugin.launchnavigator": {
                "GOOGLE_API_KEY_FOR_ANDROID": ""
-            },
+            },            
+              
+            "cordova-plugin-apprate": {},         
 		    "cordova-plugin-dialogs": {},
 		    "cordova-plugin-enable-multidex": {},
 			"cordova-plugin-firebasex": {
