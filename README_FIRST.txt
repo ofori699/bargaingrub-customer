@@ -1,3 +1,14 @@
+UPDATED october 14,2020
+
+1. for android kindly use the package_android.json
+copy the content of package_android.json to package.json
+
+2. for ios please use the package_ios.json
+copy the content of package_ios.json to package.json
+
+
+
+================================================================================================
 
 Common issue with compiling the app
 
@@ -74,5 +85,3 @@ in there latest sdk
 
 see screenshot 
 https://imgur.com/a/VJAmA2B
-
-

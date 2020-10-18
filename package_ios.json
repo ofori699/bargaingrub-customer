@@ -9,8 +9,8 @@
         "cordova-plugin-device": "2.0.3",
         "cordova-plugin-facebook4": "6.4.0",
         "cordova-plugin-file-transfer": "1.7.1",
-        "cordova-plugin-geolocation": "4.0.2",
-        "cordova-plugin-googleplus": "8.5.1",
+        "cordova-plugin-geolocation": "4.0.2", 
+        "cordova-plugin-googleplus": "8.5.1", 
         "cordova-plugin-inappbrowser": "3.2.0",
         "cordova-plugin-media": "5.0.2",
         "cordova-plugin-network-information": "2.0.2",
@@ -18,10 +18,9 @@
         "cordova-plugin-x-socialsharing": "5.6.5",
         "cordova.plugins.diagnostic": "5.0.1",
         "cordova-plugin-request-location-accuracy": "2.3.0",
-        "uk.co.workingedge.phonegap.plugin.launchnavigator": "5.0.4",        
-        "cordova-plugin-apprate": "1.5.0",  
-		"cordova-plugin-dialogs": "git+https://github.com/dpa99c/cordova-plugin-dialogs.git",
-	    "cordova-plugin-enable-multidex": "^0.2.0",
+        "uk.co.workingedge.phonegap.plugin.launchnavigator": "5.0.4",
+        "cordova-plugin-ionic-webview": "5.0.0", 
+        "cordova-plugin-apprate": "1.5.0",  		
 	    "cordova-plugin-firebasex": "10.1.2-cli"      
     },
     "cordova": {
@@ -36,7 +35,7 @@
              "APP_NAME": "Karenderia"
           },
           "cordova-plugin-file-transfer": {},
-            "cordova-plugin-geolocation": {},
+            "cordova-plugin-geolocation": {},  
             "cordova-plugin-googleplus": {
                 "REVERSED_CLIENT_ID": "com.googleusercontent.apps.46158489047-3a9m0f5gg4p9aemeo3vmh971dphtc3dn",
                 "PLAY_SERVICES_VERSION": "17.0.0"
@@ -53,16 +52,15 @@
             "uk.co.workingedge.phonegap.plugin.launchnavigator": {
                "GOOGLE_API_KEY_FOR_ANDROID": "",
                "OKHTTP_VERSION": "3.12.1"
-            },                        
-            "cordova-plugin-apprate": {},         
-		    "cordova-plugin-dialogs": {},
-		    "cordova-plugin-enable-multidex": {},
+            },            
+            "cordova-plugin-ionic-webview": {},   
+            "cordova-plugin-apprate": {},         		    
 			"cordova-plugin-firebasex": {
 	           "ANDROID_ICON_ACCENT": "#FF11FF11",
 	           "FIREBASE_ANALYTICS_COLLECTION_ENABLED": "false",
 	           "FIREBASE_PERFORMANCE_COLLECTION_ENABLED": "false",
 	           "FIREBASE_CRASHLYTICS_COLLECTION_ENABLED": "false",
-	           "SETUP_RECAPTCHA_VERIFICATION": "false",
+	           "SETUP_RECAPTCHA_VERIFICATION": "true",
 	           "IOS_STRIP_DEBUG": "true"
 		    }        
         }        

@@ -355,7 +355,6 @@ initGeocomplete = function(element){
 				$(".mapbox_s_goecoder input").attr("id","search_address");
 				$(".mapbox_s_goecoder input").attr("placeholder", t("Search for your location") );	
 				$(".mapbox_s_goecoder input").attr("autocomplete","off");
-				$("#map_enter_address  .stic-icon").hide();
 				
 				geo_suggestion.on('result', function(results) {
 									    
@@ -954,7 +953,7 @@ map_addMarker = function(index, lat, lng, icon,  info_html){
 	                 switch (current_page_id){
 	                 	case "map_select_location":
 	                 	case "address_form":
-	                 	case "address_book":
+	                 	case "address_book":	                 	   
 	                 	   if ( app_settings.map_auto_identity_location==1){
 	                 	       GeocodeLat( new_lat , new_lng  );
 	                 	   } else {
@@ -1033,58 +1032,61 @@ GeocodeLat = function(lat, lng){
 	}	
 	dump("GeocodeLat");
 	if(app_settings = getAppSettings()){
-		setTimeout(function() {
-			switch(app_settings.map_provider.provider){
-				case "google.maps":
-				   var geocoder = new google.maps.Geocoder;
-				   var latlng = {lat: parseFloat(lat), lng: parseFloat(lng)};
-				   geocoder.geocode({'location': latlng}, function(results, status) {
-				   	  dump("GeocodeLat response");
-				   	  dump(status);
-				   	  
-				   	  identifyLocationLoader(false);
-				   	  
-				   	  if (!app_settings.map_auto_identity_location){			   	  	  
-				   	  	  $(".identify_location_wrap").hide();
-				   	  }
-				   	  
-				   	  if (status === 'OK') {		
-				   	  	  if (results[0]) {		
-				   	  	  		   	  	  	 			   	  	  	 
-				   	  	  	 			   	  	  	 
-				   	  	  	 $resp = parseAdress(results);
-				   	  	  	 dump("parseAdress=> GeocodeLat");
-				   	  	  	 dump($resp);					   	  	  	
+		
+		setTimeout(function() {	
+		
+		switch(app_settings.map_provider.provider){
+			case "google.maps":
+			   var geocoder = new google.maps.Geocoder;
+			   var latlng = {lat: parseFloat(lat), lng: parseFloat(lng)};
+			   geocoder.geocode({'location': latlng}, function(results, status) {
+			   	  dump("GeocodeLat response");
+			   	  dump(status);
+			   	  
+			   	  identifyLocationLoader(false);
+			   	  
+			   	  if (!app_settings.map_auto_identity_location){			   	  	  
+			   	  	  $(".identify_location_wrap").hide();
+			   	  }
+			   	  
+			   	  if (status === 'OK') {		
+			   	  	  if (results[0]) {		
+			   	  	  		   	  	  	 			   	  	  	 
+			   	  	  	 			   	  	  	 
+			   	  	  	 $resp = parseAdress(results);
+			   	  	  	 dump("parseAdress=> GeocodeLat");
+			   	  	  	 dump($resp);					   	  	  	
 
-				   	  	  	 current_page_id = onsenNavigator.topPage.id;	
-				   	  	  	 dump("current_page_id=>"+current_page_id);
-				   	  	  	 			   	  	  	 		   	  	  	
-				   	  	  	 if (current_page_id=="map_select_location"){
-					   	  	  	 $(".print_location_address").html( results[0].formatted_address );
-					   	  	  	 $(".recent_search_address").val( results[0].formatted_address );
-				   	  	  	 } 
-				   	  	  	 
-				   	  	  	 $("#"+current_page_id +" .street").val( $resp.street );
-				   	  	  	 $("#"+current_page_id +" .city").val( $resp.city );
-				   	  	  	 $("#"+current_page_id +" .state").val( $resp.state );
-				   	  	  	 $("#"+current_page_id +" .zipcode").val( $resp.zipcode );
-				   	  	  	 $("#"+current_page_id +" .country").val( $resp.country );
-				   	  	  	 
-				   	  	  } else {
-				   	  	  	 showToast( t("No results found") );
-				   	  	  }
-				   	  } else {
-				   	  	  showToast( t("Geocoder failed due to:") + status  );
-				   	  }
-				   });
-				    	
-				 break;
-				 
-				 case "mapbox":			   
-				   params = "lat="+ lat + "&lng="+ lng;
-				   processDynamicAjax("mapboxgeocode",params , 'print_location_address', 'GET', 1);
-				 break;
-			}
+			   	  	  	 current_page_id = onsenNavigator.topPage.id;	
+			   	  	  	 dump("current_page_id=>"+current_page_id);
+			   	  	  	 			   	  	  	 		   	  	  	
+			   	  	  	 if (current_page_id=="map_select_location"){
+				   	  	  	 $(".print_location_address").html( results[0].formatted_address );
+				   	  	  	 $(".recent_search_address").val( results[0].formatted_address );
+			   	  	  	 } 
+			   	  	  	 
+			   	  	  	 $("#"+current_page_id +" .street").val( $resp.street );
+			   	  	  	 $("#"+current_page_id +" .city").val( $resp.city );
+			   	  	  	 $("#"+current_page_id +" .state").val( $resp.state );
+			   	  	  	 $("#"+current_page_id +" .zipcode").val( $resp.zipcode );
+			   	  	  	 $("#"+current_page_id +" .country").val( $resp.country );
+			   	  	  	 
+			   	  	  } else {
+			   	  	  	 showToast( t("No results found") );
+			   	  	  }
+			   	  } else {
+			   	  	  showToast( t("Geocoder failed due to:") + status  );
+			   	  }
+			   });
+			    	
+			 break;
+			 
+			 case "mapbox":			   
+			   params = "lat="+ lat + "&lng="+ lng;
+			   processDynamicAjax("mapboxgeocode",params , 'print_location_address', 'GET', 1);
+			 break;
+		}
+		
 		}, 300); 
 	}		
 };
