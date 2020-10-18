@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<widget xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0" xmlns:android="http://schemas.android.com/apk/res/android" id="com.bastisapp.mobileapp3" versionCode="1.5.2" version="1.5.2">
+<widget xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0" xmlns:android="http://schemas.android.com/apk/res/android" id="customer.bargaingrub.com" versionCode="1.5.2" version="1.5.2">
   <name>BargainGrub</name>
   <description>
         BargainGrub
     </description>
-  <author email="bastikikang@gmail.com" href="http://cordova.io">
-        bastisapp.com
+  <author email="contact@bargaingrub.com" href="http://cordova.io">
+        bargaingrub.com
     </author>
   <content src="index.html"/>
   <preference name="orientation" value="portrait"/>
